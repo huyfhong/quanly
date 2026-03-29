@@ -133,3 +133,9 @@ Tài liệu này ghi lại các thay đổi, cải tiến và cấu trúc hệ t
 
 ---
 *Ghi chú: Cơ sở dữ liệu (Database) được giữ nguyên cấu trúc gốc theo yêu cầu.*
+
+## Quy trình làm việc của Gemini CLI (Cập nhật 29/03/2026)
+- **Tự động Commit:** Mỗi khi thực hiện thay đổi mã nguồn (sửa file, thêm tính năng, fix lỗi), Gemini CLI sẽ tự động thực hiện lệnh `git add` và `git commit` trên nhánh hiện tại.
+- **Thông điệp Commit:** Thông điệp sẽ được mô tả ngắn gọn và rõ ràng theo chuẩn (ví dụ: `feat:`, `fix:`, `chore:`, `docs:`).
+- **Nhánh riêng:** Luôn ưu tiên làm việc trên các nhánh tính năng (feature branches) để bảo vệ nhánh chính (`main`).
+- **Gộp nhánh:** Người dùng có thể yêu cầu gộp nhánh (merge) vào `main` bất cứ lúc nào bằng lệnh `git merge`.
