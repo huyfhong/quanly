@@ -1,0 +1,75 @@
+
+.header-mid{
+    background-color: #2a334f;
+}
+.dropdown:hover > .dropdown-menu,.dropend:hover >.dropdown-menu{
+    display:block;
+}
+.dropend:hover >.dropdown-menu{
+    position: absolute;
+    margin-left:100%;
+    margin-bottom:100%;
+}
+.dropdown-menu{
+    background-color: #364269;
+}
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+  .navbar {
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    background-color: #0056b3;
+    border-radius: 5px;
+    color: #fff !important;
+}
+
+.navbar-toggler-icon {
+    background-color: #fff;
+}
+
+.dropdown-menu a:hover {
+    background-color: #0056b3;
+    color: #fff !important;
+}
+/* Đổi màu khi hover qua mục dropdown */
+.dropdown-item:hover {
+  background-color: #0056b3;
+  
+}
+
+

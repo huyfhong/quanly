@@ -1,0 +1,120 @@
+
+.header-mid{
+    background-color: #2a334f;
+}
+.dropdown:hover > .dropdown-menu,.dropend:hover >.dropdown-menu{
+    display:block;
+}
+.dropend:hover >.dropdown-menu{
+    position: absolute;
+    margin-left:100%;
+    margin-bottom:100%;
+}
+.dropdown-menu{
+    background-color: #364269;
+}
+.swiper {
+    width: 100%;
+    height: 120%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .navbar {
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    background-color: #0056b3;
+    border-radius: 5px;
+    color: #fff !important;
+}
+
+.navbar-toggler-icon {
+    background-color: #fff;
+}
+
+.dropdown-menu a:hover {
+    background-color: #0056b3;
+    color: #fff !important;
+}
+/* Đổi màu khi hover qua mục dropdown */
+.dropdown-item:hover {
+  background-color: #0056b3;
+  
+}
+
+
+.product-details {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-image {
+  max-width: 300px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+p {
+  font-size: 16px;
+  color: #555;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Điều chỉnh chiều cao thanh tìm kiếm */
+.input-group .form-control {
+  height: 50px; /* Thiết lập chiều cao cho thanh input */
+}
+
+/* Điều chỉnh chiều cao nút tìm kiếm */
+.input-group .btn {
+  height: 50px; /* Thiết lập chiều cao cho nút */
+}
