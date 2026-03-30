@@ -90,13 +90,11 @@ $l = count($list_nhap);
                         <td class="text-center"><?php echo date("d/m/Y", strtotime($v->ngaynhap));?></td>
                         <td><?php echo $v->ghichu;?></td>
                         <td class="text-center">
-                            <div class="btn-group" role="group">
-                                <a href="javascript:void(0);" onclick="confirmDelete('./element/mChungtunhap/chungtunhapAct.php?reqact=deletechungtunhap&idchungtunhap=<?php echo $v->idchungtunhap;?>')" 
-                                   class="btn btn-outline-danger btn-sm" title="Xóa">
+                            <div class="btn-action-group">
+                                <a href="javascript:void(0);" onclick="confirmDelete('./element/mChungtunhap/chungtunhapAct.php?reqact=deletechungtunhap&idchungtunhap=<?php echo $v->idchungtunhap;?>')" class="btn btn-outline-danger btn-action" title="Xóa">
                                     <i class="bi bi-trash"></i>
                                 </a>
-                                <a href="./index.php?req=chungtunhapUpdate&idchungtunhap=<?php echo $v->idchungtunhap;?>" 
-                                   class="btn btn-outline-primary btn-sm" title="Cập nhật">
+                                <a href="./index.php?req=chungtunhapUpdate&idchungtunhap=<?php echo $v->idchungtunhap;?>" class="btn btn-outline-primary btn-action" title="Cập nhật">
                                     <i class="bi bi-pencil-square"></i>
                                 </a>
                             </div>

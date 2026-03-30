@@ -128,11 +128,11 @@ $list_view = $hh->HanghoaView();
                             <?php endif; ?>
                         </td> 
                         <td class="text-center">
-                            <div class="btn-group" role="group">
-                                <a href="javascript:void(0);" onclick="confirmDelete('./element/mhanghoa/hanghoaAct.php?reqact=deletehanghoa&idhanghoa=<?php echo $v->idhanghoa;?>')" class="btn btn-outline-danger btn-sm" title="Xóa">
+                            <div class="btn-action-group">
+                                <a href="javascript:void(0);" onclick="confirmDelete('./element/mhanghoa/hanghoaAct.php?reqact=deletehanghoa&idhanghoa=<?php echo $v->idhanghoa;?>')" class="btn btn-outline-danger btn-action" title="Xóa">
                                     <i class="bi bi-trash"></i>
                                 </a>
-                                <a href="./index.php?req=hanghoaUpdate&idhanghoa=<?php echo $v->idhanghoa;?>" class="btn btn-outline-primary btn-sm" title="Cập nhật">
+                                <a href="./index.php?req=hanghoaUpdate&idhanghoa=<?php echo $v->idhanghoa;?>" class="btn btn-outline-primary btn-action" title="Cập nhật">
                                     <i class="bi bi-pencil-square"></i>
                                 </a>
                             </div>

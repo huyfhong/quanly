@@ -61,13 +61,11 @@ $l = count($list_CTdonhang);
                         <td class="text-center"><?php echo $v->soluong;?></td>
                         <td class="text-end text-success fw-bold"><?php echo number_format($thanhtien, 0, ',', '.');?>đ</td>
                         <td class="text-center">
-                            <div class="btn-group" role="group">
-                                <a href="javascript:void(0);" onclick="confirmDelete('./element/mCTdonhang/CTdonhangAct.php?reqact=deleteCTdonhang&idctdonhang=<?php echo $v->idctdonhang;?>')" 
-                                   class="btn btn-outline-danger btn-sm" title="Xóa">
+                            <div class="btn-action-group">
+                                <a href="javascript:void(0);" onclick="confirmDelete('./element/mCTdonhang/CTdonhangAct.php?reqact=deletectdonhang&idctdonhang=<?php echo $v->idctdonhang;?>')" class="btn btn-outline-danger btn-action" title="Xóa">
                                     <i class="bi bi-trash"></i>
                                 </a>
-                                <a href="./index.php?req=CTdonhangUpdate&idctdonhang=<?php echo $v->idctdonhang;?>" 
-                                   class="btn btn-outline-primary btn-sm" title="Cập nhật">
+                                <a href="./index.php?req=CTdonhangUpdate&idctdonhang=<?php echo $v->idctdonhang;?>" class="btn btn-outline-primary btn-action" title="Cập nhật">
                                     <i class="bi bi-pencil-square"></i>
                                 </a>
                             </div>

@@ -81,13 +81,11 @@ $l = count($list_tt);
                         <td><?php echo $v->tenthuoctinh;?></td>
                         <td><?php echo $v->ghichu;?></td>
                         <td class="text-center">
-                            <div class="btn-group" role="group">
-                                <a href="javascript:void(0);" onclick="confirmDelete('./element/mThuoctinh/thuoctinhAct.php?reqact=deletethuoctinh&idthuoctinh=<?php echo $v->idthuoctinh;?>')" 
-                                   class="btn btn-outline-danger btn-sm" title="Xóa">
+                            <div class="btn-action-group">
+                                <a href="javascript:void(0);" onclick="confirmDelete('./element/mThuoctinh/thuoctinhAct.php?reqact=deletethuoctinh&idthuoctinh=<?php echo $v->idthuoctinh;?>')" class="btn btn-outline-danger btn-action" title="Xóa">
                                     <i class="bi bi-trash"></i>
                                 </a>
-                                <a href="./index.php?req=thuoctinhUpdate&idthuoctinh=<?php echo $v->idthuoctinh;?>" 
-                                   class="btn btn-outline-primary btn-sm" title="Cập nhật">
+                                <a href="./index.php?req=thuoctinhUpdate&idthuoctinh=<?php echo $v->idthuoctinh;?>" class="btn btn-outline-primary btn-action" title="Cập nhật">
                                     <i class="bi bi-pencil-square"></i>
                                 </a>
                             </div>

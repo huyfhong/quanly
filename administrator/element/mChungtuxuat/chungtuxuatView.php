@@ -90,13 +90,11 @@ $l = count($list_xuat);
                         <td class="text-center"><?php echo date("d/m/Y", strtotime($v->ngayxuat));?></td>
                         <td><?php echo $v->ghichu;?></td>
                         <td class="text-center">
-                            <div class="btn-group" role="group">
-                                <a href="javascript:void(0);" onclick="confirmDelete('./element/mChungtuxuat/chungtuxuatAct.php?reqact=deletechungtuxuat&idchungtuxuat=<?php echo $v->idchungtuxuat;?>')" 
-                                   class="btn btn-outline-danger btn-sm" title="Xóa">
+                            <div class="btn-action-group">
+                                <a href="javascript:void(0);" onclick="confirmDelete('./element/mChungtuxuat/chungtuxuatAct.php?reqact=deletechungtuxuat&idchungtuxuat=<?php echo $v->idchungtuxuat;?>')" class="btn btn-outline-danger btn-action" title="Xóa">
                                     <i class="bi bi-trash"></i>
                                 </a>
-                                <a href="./index.php?req=chungtuxuatUpdate&idchungtuxuat=<?php echo $v->idchungtuxuat;?>" 
-                                   class="btn btn-outline-primary btn-sm" title="Cập nhật">
+                                <a href="./index.php?req=chungtuxuatUpdate&idchungtuxuat=<?php echo $v->idchungtuxuat;?>" class="btn btn-outline-primary btn-action" title="Cập nhật">
                                     <i class="bi bi-pencil-square"></i>
                                 </a>
                             </div>

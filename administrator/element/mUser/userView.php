@@ -139,7 +139,7 @@ $l = count($list_user);
                         <td><?php echo date("d/m/Y", strtotime($v->ngaydangky));?></td>
                         <td class="text-center">
                             <a href="./element/mUser/userAct.php?reqact=setlock&iduser=<?php echo $v->iduser; ?>&setlock=<?php echo $v->setlock;?>" 
-                               class="btn btn-sm <?php echo $v->setlock == 0 ? 'btn-outline-success' : 'btn-outline-warning'; ?>">
+                               class="btn btn-action <?php echo $v->setlock == 0 ? 'btn-outline-success' : 'btn-outline-warning'; ?>">
                                 <?php if($v->setlock == 0): ?>
                                     <i class="bi bi-unlock-fill"></i>
                                 <?php else: ?>
@@ -148,13 +148,13 @@ $l = count($list_user);
                             </a>
                         </td>
                         <td class="text-center">
-                            <div class="btn-group" role="group">
+                            <div class="btn-action-group">
                                 <a href="javascript:void(0);" onclick="confirmDelete('./element/mUser/userAct.php?reqact=deleteuser&iduser=<?php echo $v->iduser;?>')" 
-                                   class="btn btn-outline-danger btn-sm" title="Xóa">
+                                   class="btn btn-outline-danger btn-action" title="Xóa">
                                     <i class="bi bi-trash"></i>
                                 </a>
                                 <a href="./index.php?req=updateuser&iduser=<?php echo $v->iduser;?>" 
-                                   class="btn btn-outline-primary btn-sm" title="Cập nhật">
+                                   class="btn btn-outline-primary btn-action" title="Cập nhật">
                                     <i class="bi bi-pencil-square"></i>
                                 </a>
                             </div>

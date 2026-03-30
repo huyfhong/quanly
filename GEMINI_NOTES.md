@@ -134,6 +134,25 @@ Tài liệu này ghi lại các thay đổi, cải tiến và cấu trúc hệ t
 ---
 *Ghi chú: Cơ sở dữ liệu (Database) được giữ nguyên cấu trúc gốc theo yêu cầu.*
 
+## 30/03/2026 - Thống nhất Giao diện Nút chức năng (Admin UI)
+### 7.1. Cải tiến CSS cho các nút hành động (Action Buttons)
+- **`administrator/admin.css`**: 
+    - Bổ sung class `.btn-action-group`: Sử dụng `flex` để căn giữa và tạo khoảng cách (`gap: 0.4rem`) hợp lý giữa các nút trong bảng, thay thế cho `btn-group` của Bootstrap vốn gây cảm giác dính liền.
+    - Bổ sung class `.btn-action`: Quy định kích thước đồng nhất (32x32px), căn giữa biểu tượng (`display: inline-flex`), bo góc (`0.4rem`) và thêm hiệu ứng phóng to nhẹ khi hover (`transform: scale(1.1)`) giúp tăng trải nghiệm người dùng.
+
+### 7.2. Đồng bộ hóa toàn bộ các trang View (Administrator)
+- Thực hiện cập nhật cấu trúc nút chức năng (Xóa, Cập nhật, Khóa, In) tại tất cả các module quản trị để đảm bảo tính thẩm mỹ và nhất quán:
+    - **Quản lý Hàng hóa & Loại hàng** (`hanghoaview.php`, `loaihangview.php`)
+    - **Quản lý Tài khoản** (`AdminView.php`, `userView.php`)
+    - **Quản lý Đơn hàng & Chứng từ** (`donhangView.php`, `chungtunhapView.php`, `chungtuxuatView.php`)
+    - **Quản lý Chi tiết & Thuộc tính** (`CTdonhangView.php`, `CTchungtunhapView.php`, `CTchungtuxuatView.php`, `thuoctinhView.php`, `thuoctinh_hanghoaView.php`, `Giaview.php`)
+- **Sửa lỗi HTML:** Đã rà soát và khắc phục các lỗi thẻ đóng dư thừa (`</div>`, `</td>`) phát sinh trong quá trình tái cấu trúc giao diện, đảm bảo mã nguồn sạch và trình duyệt render chính xác.
+
+### 7.3. Danh sách File đã tác động (Mới nhất)
+- `administrator/admin.css` (Cập nhật Stylesheet)
+- Toàn bộ các file `.php` trong thư mục `administrator/element/` (Cập nhật UI nút bấm)
+
+---
 ## Quy trình làm việc của Gemini CLI (Cập nhật 29/03/2026)
 - **Tự động Commit:** Mỗi khi thực hiện thay đổi mã nguồn (sửa file, thêm tính năng, fix lỗi), Gemini CLI sẽ tự động thực hiện lệnh `git add` và `git commit` trên nhánh hiện tại.
 - **Thông điệp Commit:** Thông điệp sẽ được mô tả ngắn gọn và rõ ràng theo chuẩn (ví dụ: `feat:`, `fix:`, `chore:`, `docs:`).

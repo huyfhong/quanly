@@ -65,17 +65,15 @@ $list_view = $obj_donhang->DonhangView();
                             <span class="badge bg-info text-dark"><?php echo $v->trangthai;?></span>
                         </td>
                         <td class="text-center">
-                            <div class="btn-group" role="group">
-                                <a href="javascript:void(0);" onclick="confirmDelete('./element/mdonhang/donhangAct.php?reqact=deletedonhang&iddonhang=<?php echo $v->iddonhang;?>')" 
-                                   class="btn btn-outline-danger btn-sm" title="Xóa">
+                            <div class="btn-action-group">
+                                <a href="javascript:void(0);" onclick="confirmDelete('./element/mdonhang/donhangAct.php?reqact=deletedonhang&iddonhang=<?php echo $v->iddonhang;?>')" class="btn btn-outline-danger btn-action" title="Xóa">
                                     <i class="bi bi-trash"></i>
                                 </a>
-                                <a href="./index.php?req=donhangUpdate&iddonhang=<?php echo $v->iddonhang;?>" 
-                                   class="btn btn-outline-primary btn-sm" title="Cập nhật">
+                                <a href="./index.php?req=donhangUpdate&iddonhang=<?php echo $v->iddonhang;?>" class="btn btn-outline-primary btn-action" title="Cập nhật">
                                     <i class="bi bi-pencil-square"></i>
                                 </a>
                                 <a href="./element/mdonhang/in.php?iddonhang=<?php echo $v->iddonhang; ?>" target="_blank" 
-                                   class="btn btn-outline-secondary btn-sm" title="In đơn hàng">
+                                   class="btn btn-outline-secondary btn-action" title="In đơn hàng">
                                     <i class="bi bi-printer"></i>
                                 </a>
                             </div>

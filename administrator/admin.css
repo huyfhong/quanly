@@ -236,3 +236,29 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
 }
+
+/* Table Action Buttons */
+.btn-action-group {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.btn-action {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    border-radius: 0.4rem !important;
+    transition: all 0.2s ease;
+}
+
+.btn-action:hover {
+    transform: scale(1.1);
+}
+
+.btn-action i {
+    font-size: 0.9rem;
+}
