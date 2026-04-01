@@ -153,6 +153,28 @@ Tài liệu này ghi lại các thay đổi, cải tiến và cấu trúc hệ t
 - Toàn bộ các file `.php` trong thư mục `administrator/element/` (Cập nhật UI nút bấm)
 
 ---
+## 01/04/2026 - Tích hợp PHPMailer & Gửi email chào mừng
+### 8.1. Cấu hình Hệ thống (System Configuration)
+- **`config.ini`**: 
+    - Chuyển đổi sang định dạng chuẩn `.ini` hoàn toàn, tách biệt section `[database]` và `[mail]`.
+    - Bổ sung thông số cấu hình SMTP cho PHPMailer (Gmail App Password).
+- **Database (`UserCls.php`)**: Cập nhật phương thức `UserAdd` để lưu trữ thêm cột `email`.
+
+### 8.2. Tính năng Đăng ký & Thông báo Email
+- **`AdminLogin.php`**: Bổ sung trường nhập **"Địa chỉ Email"** vào Modal đăng ký tài khoản.
+- **`userAct.php`**:
+    - Tích hợp thư viện **PHPMailer** vào luồng đăng ký.
+    - Tự động đọc cấu hình SMTP từ file `config.ini`.
+    - Thực hiện gửi email chào mừng với giao diện HTML (Inline CSS) sau khi người dùng đăng ký tài khoản thành công.
+    - Cập nhật đường dẫn tương đối để đọc file cấu hình chính xác trong môi trường module.
+
+### 8.3. Danh sách File đã tác động (Cập nhật mới)
+- `administrator/element/mod/config.ini` (Cấu trúc lại & Thêm config mail)
+- `administrator/AdminLogin.php` (Thêm input Email vào form đăng ký)
+- `administrator/element/mod/UserCls.php` (Cập nhật model lưu email)
+- `administrator/element/mUser/userAct.php` (Logic gửi email chào mừng)
+
+---
 ## Quy trình làm việc của Gemini CLI (Cập nhật 29/03/2026)
 - **Tự động Commit:** Mỗi khi thực hiện thay đổi mã nguồn (sửa file, thêm tính năng, fix lỗi), Gemini CLI sẽ tự động thực hiện lệnh `git add` và `git commit` trên nhánh hiện tại.
 - **Thông điệp Commit:** Thông điệp sẽ được mô tả ngắn gọn và rõ ràng theo chuẩn (ví dụ: `feat:`, `fix:`, `chore:`, `docs:`).
