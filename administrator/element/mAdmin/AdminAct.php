@@ -14,8 +14,9 @@ if(isset($_GET['reqact'])) {
             $ngaysinh = $_POST['ngaysinh'];
             $diachi = $_POST['diachi'];
             $dienthoai = $_POST['dienthoai'];
+            $email = $_POST['email'];
             $adminObj = new admin();
-            $kq= $adminObj->AdminAdd($adminname,$password,$hoten,$gioitinh,$ngaysinh,$diachi,$dienthoai);
+            $kq= $adminObj->AdminAdd($adminname,$password,$hoten,$gioitinh,$ngaysinh,$diachi,$dienthoai,$email);
             if($kq) {
                 header('location:../../index.php?req=AdminView&result=ok');
 
@@ -57,8 +58,9 @@ if(isset($_GET['reqact'])) {
             $ngaysinh = $_POST['ngaysinh'];
             $diachi = $_POST['diachi'];
             $dienthoai = $_POST['dienthoai'];
+            $email = $_POST['email'];
             $adminObj = new admin();
-            $kq= $adminObj->AdminUpdate($adminname,$password,$hoten,$gioitinh,$ngaysinh,$diachi,$dienthoai,$idadmin);
+            $kq= $adminObj->AdminUpdate($adminname,$password,$hoten,$gioitinh,$ngaysinh,$diachi,$dienthoai,$email,$idadmin);
             if($kq){
                 header('location:../../index.php?req=AdminView&result=ok');
             }else{

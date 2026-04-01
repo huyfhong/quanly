@@ -53,9 +53,9 @@ class user extends Database{
             return $getAll->fetchAll();
     }
     
-    public function UserAdd($username,$password,$hoten,$gioitinh,$ngaysinh,$diachi,$dienthoai){
-        $sql ="INSERT INTO user (username, password, hoten , gioitinh , ngaysinh ,diachi, dienthoai) VAlUES (?,?,?,?,?,?,?)";
-        $data = array($username,$password,$hoten,$gioitinh,$ngaysinh,$diachi,$dienthoai);
+    public function UserAdd($username,$password,$hoten,$gioitinh,$ngaysinh,$diachi,$dienthoai,$email){
+        $sql ="INSERT INTO user (username, password, hoten , gioitinh , ngaysinh ,diachi, dienthoai, email) VAlUES (?,?,?,?,?,?,?,?)";
+        $data = array($username,$password,$hoten,$gioitinh,$ngaysinh,$diachi,$dienthoai,$email);
 
         $add =$this->connect->prepare($sql);        
         $add->execute($data);
@@ -74,9 +74,9 @@ class user extends Database{
         return $del->rowCount();
     
     }
-    public function UserUpdate($username,$password,$hoten,$gioitinh,$ngaysinh,$diachi,$dienthoai,$iduser){
-        $sql ="UPDATE user set username= ?,password=?,hoten=?,gioitinh=?,ngaysinh=?,diachi=?,dienthoai=? WHERE iduser=?";
-        $data = array($username,$password,$hoten,$gioitinh,$ngaysinh,$diachi,$dienthoai,$iduser);
+    public function UserUpdate($username,$password,$hoten,$gioitinh,$ngaysinh,$diachi,$dienthoai,$email,$iduser){
+        $sql ="UPDATE user set username= ?,password=?,hoten=?,gioitinh=?,ngaysinh=?,diachi=?,dienthoai=?,email=? WHERE iduser=?";
+        $data = array($username,$password,$hoten,$gioitinh,$ngaysinh,$diachi,$dienthoai,$email,$iduser);
 
         $update =$this->connect->prepare($sql);        
         $update->execute($data);

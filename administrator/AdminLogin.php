@@ -170,6 +170,10 @@
                                 <label class="form-label small fw-bold text-muted">Họ Và Tên</label>
                                 <input type="text" class="form-control" name="hoten" placeholder="Nhập họ và tên đầy đủ" required>
                             </div>
+                            <div class="col-12">
+                                <label class="form-label small fw-bold text-muted">Địa Chỉ Email</label>
+                                <input type="email" class="form-control" name="email" placeholder="Ví dụ: name@example.com" required>
+                            </div>
                             <div class="col-md-6">
                                 <label class="form-label small fw-bold text-muted">Ngày Sinh</label>
                                 <input type="date" class="form-control" name="ngaysinh" required>

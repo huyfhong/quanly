@@ -64,6 +64,13 @@ $l = count($list_user);
                     </div>
                 </div>
                 <div class="col-md-6">
+                    <label class="form-label">Email</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                        <input type="email" class="form-control" placeholder="Nhập email" name="email">
+                    </div>
+                </div>
+                <div class="col-md-6">
                     <label class="form-label d-block">Giới Tính</label>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="gioitinh" value="1" id="gender_male" checked>
@@ -115,6 +122,7 @@ $l = count($list_user);
                         <th scope="col">Ngày Sinh</th>
                         <th scope="col">Địa chỉ</th>
                         <th scope="col">Điện thoại</th>
+                        <th scope="col">Email</th>
                         <th scope="col">Ngày ĐK</th>
                         <th scope="col">Khóa</th>
                         <th scope="col">Chức năng</th>
@@ -136,6 +144,7 @@ $l = count($list_user);
                         <td><?php echo $v->ngaysinh;?></td>
                         <td><?php echo $v->diachi;?></td>
                         <td><?php echo $v->dienthoai;?></td>
+                        <td><?php echo $v->email;?></td>
                         <td><?php echo date("d/m/Y", strtotime($v->ngaydangky));?></td>
                         <td class="text-center">
                             <a href="./element/mUser/userAct.php?reqact=setlock&iduser=<?php echo $v->iduser; ?>&setlock=<?php echo $v->setlock;?>" 

@@ -57,6 +57,12 @@ $getuser = $userObj->UserGetbyId($iduser);
     </div>
     </tr>
     <tr>
+    <div class="input-group mb-3">
+    <span class="input-group-text">Email</span>
+    <input type="email" class="form-control" placeholder=" Nhập email" name="email" value="<?php echo $getuser->email;?>"/>
+    </div>
+    </tr>
+    <tr>
         <td><button type="submit" class="btn btn-primary" value="Cập nhật">Submit</button></td>
         <td><button type="reset" class="btn btn-primary" value="làm lại"><b id="noteForm"></b>Reset</button></td>
     </tr>

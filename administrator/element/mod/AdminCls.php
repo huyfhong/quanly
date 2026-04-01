@@ -53,9 +53,9 @@ class admin extends Database{
             return $getAll->fetchAll();
     }
     
-    public function AdminAdd($adminname,$password,$hoten,$gioitinh,$ngaysinh,$diachi,$dienthoai){
-        $sql ="INSERT INTO admin (adminname, password, hoten , gioitinh , ngaysinh ,diachi, dienthoai) VAlUES (?,?,?,?,?,?,?)";
-        $data = array($adminname,$password,$hoten,$gioitinh,$ngaysinh,$diachi,$dienthoai);
+    public function AdminAdd($adminname,$password,$hoten,$gioitinh,$ngaysinh,$diachi,$dienthoai,$email){
+        $sql ="INSERT INTO admin (adminname, password, hoten , gioitinh , ngaysinh ,diachi, dienthoai, email) VAlUES (?,?,?,?,?,?,?,?)";
+        $data = array($adminname,$password,$hoten,$gioitinh,$ngaysinh,$diachi,$dienthoai,$email);
 
         $add =$this->connect->prepare($sql);        
         $add->execute($data);
@@ -74,9 +74,10 @@ class admin extends Database{
         return $del->rowCount();
     
     }
-    public function AdminUpdate($adminname,$password,$hoten,$gioitinh,$ngaysinh,$diachi,$dienthoai,$idadmin){
-        $sql ="UPDATE admin set adminname= ?,password=?,hoten=?,gioitinh=?,ngaysinh=?,diachi=?,dienthoai=? WHERE idadmin=?";
-        $data = array($adminname,$password,$hoten,$gioitinh,$ngaysinh,$diachi,$dienthoai,$idadmin);
+    public function AdminUpdate($adminname,$password,$hoten,$gioitinh,$ngaysinh,$diachi,$dienthoai,$email,$idadmin){
+        $sql ="UPDATE admin set adminname= ?,password=?,hoten=?,gioitinh=?,ngaysinh=?,diachi=?,dienthoai=?, email=? WHERE idadmin=?";
+        $data = array($adminname,$password,$hoten,$gioitinh,
+        $ngaysinh,$diachi,$dienthoai,$email,$idadmin);
 
         $update =$this->connect->prepare($sql);        
         $update->execute($data);
