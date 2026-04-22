@@ -1,12 +1,11 @@
  <?php
-// xu ly duong dan den datbase.php
-$s = '../../element/mod/Database.php';
-if (file_exists($s)){
-    $f = $s;
-}else{
-    $f= './element/mod/Database.php';
+// xu ly duong dan den database.php
+$f = __DIR__ . '/Database.php';
+if (file_exists($f)) {
+    require_once $f;
+} else {
+    require_once '../../element/mod/Database.php';
 }
-if (!file_exists($f)) {
     $f = './administrator/element/mod/Database.php';
     }
 require_once $f;

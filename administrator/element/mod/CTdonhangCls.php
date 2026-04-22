@@ -1,15 +1,6 @@
 <?php
 date_default_timezone_set('Asia/Ho_Chi_Minh');  
-$s = '../../element/mod/Database.php';
-if (file_exists($s)) {
-    $f = $s;
-} else {
-    $f = './element/mod/Database.php';
-}
-if(!file_exists($f)) {
-    $f='./administrator/element/mod/Database.php';
-}
-require_once(__DIR__ . '/Database.php');
+require_once __DIR__ . '/Database.php';
 
 class ctdonhang extends Database
 {

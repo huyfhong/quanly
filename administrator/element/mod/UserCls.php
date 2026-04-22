@@ -1,12 +1,12 @@
 <?php
-// xu ly duong dan den datbase.php
-$s = '../../element/mod/Database.php';
-if (file_exists($s)){
-    $f = $s;
-}else{
-    $f= './element/mod/Database.php';
+// xu ly duong dan den database.php
+$f = __DIR__ . '/Database.php';
+if (file_exists($f)) {
+    require_once $f;
+} else {
+    // Trường hợp dự phòng nếu cấu trúc thư mục khác (hiếm khi xảy ra với __DIR__)
+    require_once '../../element/mod/Database.php';
 }
-require_once $f;
 
 // cac lop trong user
 class user extends Database{
@@ -144,6 +144,16 @@ class user extends Database{
         $search->execute($data);
 
         return $search->fetchAll();
+    }
+    public function UserGetByUsername($username){
+        $sql ='select * from user where username=?';
+        $data = array($username);
+
+        $getOne =$this->connect->prepare($sql); 
+        $getOne->setFetchMode(PDO::FETCH_OBJ);      
+        $getOne->execute($data);
+        
+        return $getOne->fetch();
     }
 }
     

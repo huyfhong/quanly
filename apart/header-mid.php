@@ -1,5 +1,4 @@
 <?php
-session_start();
 require './administrator/element/mod/loaihangCls.php';
 ?>
 <?php
@@ -110,8 +109,11 @@ if (isset($_SESSION['giohang'])) {
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownAccount">
                     <?php if (isset($_SESSION['USER'])): ?>
-                        <li><h6 class="dropdown-header">Xin chào, <?php echo $_SESSION['USER']; ?></h6></li>
+                        <li><h5 class="dropdown-header text-light">Xin chào, <?php echo $_SESSION['USER']; ?></h5></li>
                         <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="user_profile.php">
+                            <i class="fa-solid fa-user-pen me-2"></i>Cập nhật thông tin
+                        </a></li>
                         <li><a class="dropdown-item text-danger"
                                href="administrator/element/mAdmin/AdminAct.php?reqact=userlogout">
                             <i class="fa-solid fa-right-from-bracket me-2"></i>Đăng xuất

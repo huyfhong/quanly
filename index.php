@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +49,9 @@
      if (isset($_GET['search'])) {
       require './apart/timkiem.php';
   } else {
-      if (!isset($_GET['reqHanghoa'])) {
+      if (isset($_GET['req']) && $_GET['req'] == 'profile') {
+          require './apart/capnhatthongtin.php';
+      } else if (!isset($_GET['reqHanghoa'])) {
           require 'apart/viewListLoaihang.php';
       } else {
           require './apart/viewHanghoa.php';

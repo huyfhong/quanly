@@ -1,14 +1,6 @@
 <?php
-$s = '../../element/mod/Database.php';
-if (file_exists($s)) {
-    $f = $s;
-} else {
-    $f = './element/mod/Database.php';
-}
-if(!file_exists($f)) {
-    $f='./administrator/element/mod/Database.php';
-}
-require_once $f;
+require_once __DIR__ . '/Database.php';
+
 class gia extends Database
 {
     public function GiaGetAll()

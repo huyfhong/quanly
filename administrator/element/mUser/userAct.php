@@ -177,6 +177,31 @@ if(isset($_GET['reqact'])) {
             header('location:../../index.php');
             break;
             
+        case 'userupdate_frontend':
+            $iduser = $_POST['iduser'];
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+            $password_old = $_POST['password_old'];
+            $hoten = $_POST['hoten'];
+            $gioitinh = $_POST['gioitinh'];
+            $ngaysinh = $_POST['ngaysinh'];
+            $diachi = $_POST['diachi'];
+            $dienthoai = $_POST['dienthoai'];
+            $email = $_POST['email'];
+
+            if (empty($password)) {
+                $password = $password_old;
+            }
+
+            $userObj = new user();
+            $kq = $userObj->UserUpdate($username, $password, $hoten, $gioitinh, $ngaysinh, $diachi, $dienthoai, $email, $iduser);
+            if ($kq) {
+                header('location:../../../user_profile.php?result=ok');
+            } else {
+                header('location:../../../user_profile.php?result=notok');
+            }
+            break;
+
         default :
             header('location:../../index.php?req=userView');
             break;
