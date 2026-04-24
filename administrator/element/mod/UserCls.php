@@ -4,7 +4,6 @@ $f = __DIR__ . '/Database.php';
 if (file_exists($f)) {
     require_once $f;
 } else {
-    // Trường hợp dự phòng nếu cấu trúc thư mục khác (hiếm khi xảy ra với __DIR__)
     require_once '../../element/mod/Database.php';
 }
 

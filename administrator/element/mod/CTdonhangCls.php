@@ -1,6 +1,13 @@
 <?php
+// xu ly duong dan den database.php
+$f = __DIR__ . '/Database.php';
+if (file_exists($f)) {
+    require_once $f;
+} else {
+    require_once '../../element/mod/Database.php';
+}
+
 date_default_timezone_set('Asia/Ho_Chi_Minh');  
-require_once __DIR__ . '/Database.php';
 
 class ctdonhang extends Database
 {

@@ -1,14 +1,11 @@
 <?php
-$s = '../../element/mod/Database.php';
-if (file_exists($s)) {
-    $f = $s;
+// xu ly duong dan den database.php
+$f = __DIR__ . '/Database.php';
+if (file_exists($f)) {
+    require_once $f;
 } else {
-    $f = './element/mod/Database.php';
+    require_once '../../element/mod/Database.php';
 }
-if(!file_exists($f)) {
-    $f='./administrator/element/mod/Database.php';
-}
-require_once(__DIR__ . '/Database.php');
 
 class hanghoa extends Database
 {

@@ -110,10 +110,10 @@ $l = count($list_CTxuat);
                         <td><?php echo $v->ghichu;?></td>
                         <td class="text-center">
                             <div class="btn-action-group">
-                                <a href="javascript:void(0);" onclick="confirmDelete('./element/mCTchungtuxuat/CTchungtuxuatAct.php?reqact=deletectchungtuxuat&idctchungtuxuat=<?php echo $v->idctchungtuxuat;?>')" class="btn btn-outline-danger btn-action" title="Xóa">
+                                <a href="javascript:void(0);" onclick="confirmDelete('./element/mCTchungtuxuat/CTchungtuxuatAct.php?reqact=deletectchungtuxuat&idCTchungtuxuat=<?php echo $v->idCTchungtuxuat;?>')" class="btn btn-outline-danger btn-action" title="Xóa">
                                     <i class="bi bi-trash"></i>
                                 </a>
-                                <a href="./index.php?req=CTchungtuxuatUpdate&idctchungtuxuat=<?php echo $v->idctchungtuxuat;?>" class="btn btn-outline-primary btn-action" title="Cập nhật">
+                                <a href="./index.php?req=CTchungtuxuatUpdate&idCTchungtuxuat=<?php echo $v->idCTchungtuxuat;?>" class="btn btn-outline-primary btn-action" title="Cập nhật">
                                     <i class="bi bi-pencil-square"></i>
                                 </a>
                             </div>

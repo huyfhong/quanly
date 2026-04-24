@@ -36,7 +36,10 @@ if(isset($_GET['reqact'])) {
             }else {
                 header('location:../../index.php?req=thuoctinhView&result=notok');
             }
-    
+            break;
+        default:
+            header('location:../../index.php?req=thuoctinhView');
+            break;
         }
     } else{
         header('location:../../index.php?req=thuoctinhView');

@@ -135,29 +135,32 @@ Tài liệu này ghi lại các thay đổi, cải tiến và cấu trúc hệ t
 
 ## 22/04/2026 - Nâng cấp Tính năng Cá nhân & Ổn định Hệ thống
 ### 10.1. Trang Cá nhân Độc lập (Frontend)
-- **`user_profile.php`**: Tạo mới trang hồ sơ người dùng độc lập tại thư mục gốc. Trang này tích hợp Header, Footer và form cập nhật, tạo không gian quản lý thông tin riêng biệt cho User.
-- **`apart/capnhatthongtin.php`**: 
-    - Thiết kế form cập nhật thông tin bằng **Bootstrap 5 Card**.
-    - Hỗ trợ thay đổi: Họ tên, Email, SĐT, Địa chỉ, Ngày sinh, Giới tính và Mật khẩu (tùy chọn).
-    - Tích hợp **SweetAlert2** hiển thị thông báo thành công/thất bại chuyên nghiệp.
-- **`header-mid.php`**: Cập nhật liên kết trong menu dropdown tài khoản trỏ trực tiếp đến `user_profile.php`.
+... (giữ nguyên phần cũ) ...
 
-### 10.2. Cải tiến Kỹ thuật & Logic xử lý
-- **Đồng bộ Session**: Chuyển `session_start()` lên đầu file `index.php` để đảm bảo nhận diện người dùng ổn định trên toàn hệ thống website.
-- **Sửa lỗi Đường dẫn (Path Fix)**: 
-    - Cập nhật toàn bộ các file Model trong `administrator/element/mod/` (như `UserCls.php`, `AdminCls.php`, `hanghoaCls.php`...) sang sử dụng **`__DIR__`** khi nhúng file `Database.php`.
-    - Việc này giúp khắc phục triệt để lỗi *Failed to open stream* khi gọi các Class từ các thư mục khác nhau.
-- **`userAct.php`**:
-    - Bổ sung case `userupdate_frontend`: Xử lý cập nhật thông tin từ trang profile.
-    - Cơ chế giữ mật khẩu thông minh: Tự động dùng lại mật khẩu cũ nếu người dùng để trống ô mật khẩu mới.
+---
+## 24/04/2026 - Sửa lỗi Hệ thống Quản trị (Admin System Fixes)
+### 11.1. Sửa lỗi Model (Cls) & Cấu trúc Dữ liệu
+- **`thuoctinhCls.php`**: Khắc phục lỗi cú pháp (dư thừa dấu đóng ngoặc) gây lỗi PHP.
+- **`thuoctinh_hanghoaCls.php`**: Dọn dẹp code thừa (Class Database giả) và chuẩn hóa cấu trúc.
+- **Đồng bộ hóa Model**: Sử dụng `generalist` để chuẩn hóa cách nhúng `Database.php` bằng `__DIR__` cho toàn bộ 13 file Model trong thư mục `mod/`, đảm bảo tính ổn định khi gọi từ bất kỳ đâu.
 
-### 10.3. Danh sách File đã tác động (Mới nhất)
-- `user_profile.php` (Tạo mới)
-- `index.php` (Chỉnh sửa - Di chuyển `session_start()`)
-- `apart/header-mid.php` (Chỉnh sửa - Cập nhật link profile)
-- `apart/capnhatthongtin.php` (Chỉnh sửa - Redirection & Path)
-- `administrator/element/mUser/userAct.php` (Chỉnh sửa - Logic cập nhật frontend)
-- Toàn bộ file `.php` trong `administrator/element/mod/` (Chỉnh sửa - Path Fix với `__DIR__`)
+### 11.2. Sửa lỗi Xử lý & Điều hướng (Act Files)
+- **Đồng bộ Case-sensitivity**: Sửa lỗi gọi sai tên file (ví dụ: `chungtunhapCls.php` -> `ChungtunhapCls.php`) giúp hệ thống chạy ổn định trên mọi môi trường.
+- **Bổ sung Default Case**: Cập nhật tất cả các file `Act` với khối `default` trong `switch-case` và xử lý điều hướng mặc định nếu không có hành động nào được yêu cầu.
+
+### 11.3. Sửa lỗi Giao diện & Logic (View & Update Files)
+- **Quản lý Đơn giá (`Giaview.php` & `GiaUpdate.php`)**:
+    - Sửa lỗi sai tên biến (`idgia` -> `iddongia`) gây lỗi khi Xóa/Sửa.
+    - Loại bỏ `number_format` trong ô nhập đơn giá để tránh lỗi định dạng khi lưu vào CSDL.
+- **Chi tiết Đơn hàng (`CTdonhangUpdate.php`)**: Khắc phục lỗi biến chưa định nghĩa (`iddonhang`, `idhanghoa`) bằng cách lấy dữ liệu trực tiếp từ đối tượng hiện tại.
+- **Hàng hóa (`hanghoaUpdate.php`)**: Sửa logic kiểm tra `checked` cho nút radio Loại hàng, giúp hiển thị chính xác loại hàng của sản phẩm khi cập nhật.
+- **Chi tiết Chứng từ (`CTchungtunhapView`, `CTchungtuxuatView`)**: Sửa lỗi viết hoa tên cột ID trong các liên kết hành động.
+
+### 11.4. Danh sách File đã tác động (Tổng lực)
+- Toàn bộ file trong `administrator/element/mod/` (Chuẩn hóa Path)
+- Toàn bộ file `*Act.php` trong `administrator/element/m*/` (Sửa Case & Logic)
+- Các file View & Update: `Giaview.php`, `GiaUpdate.php`, `CTdonhangUpdate.php`, `hanghoaUpdate.php`, `chungtuxuatUpdate.php`, `CTchungtunhapView.php`, `CTchungtuxuatView.php`, `thuoctinh_hanghoaUpdate.php`.
+
 
 ---
 *Ghi chú: Cơ sở dữ liệu (Database) được giữ nguyên cấu trúc gốc theo yêu cầu.*

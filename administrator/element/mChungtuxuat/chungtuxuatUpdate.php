@@ -1,6 +1,6 @@
 <div class="text-center text-primary">Cập nhật chứng từ xuất</div>
 <?php
-require './element/mod/chungtuxuatCls.php';
+require './element/mod/ChungtuxuatCls.php';
 $idchungtuxuat = $_GET['idchungtuxuat'];
 $xuat = new chungtuxuat();
 $getxuat = $xuat->ChungtuxuatGetbyId($idchungtuxuat);

@@ -46,7 +46,7 @@ $list_lh = $lh->LoaihangGetAll();
     foreach ($list_lh as $p) {
     ?>    
     <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="idloaihang"<?php if($gethanghoa->idloaihang) echo "checked";?>value="<?php echo $p->idloaihang;?>"/>
+    <input class="form-check-input" type="radio" name="idloaihang" <?php if($gethanghoa->idloaihang == $p->idloaihang) echo "checked";?> value="<?php echo $p->idloaihang;?>"/>
     <img class="iconimg" src='data:image/png;base64,<?php echo ($p->hinhanh);?>'/>
     <?php echo ($p->tenloaihang);?><br>
     </div>

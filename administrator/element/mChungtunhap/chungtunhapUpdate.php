@@ -1,6 +1,6 @@
 <div class="text-center text-primary">Cập nhật chứng từ nhập</div>
 <?php
-require './element/mod/chungtunhapCls.php';
+require './element/mod/ChungtunhapCls.php';
 $idchungtunhap = $_GET['idchungtunhap'];
 $nhap = new chungtunhap();
 $getnhap = $nhap->ChungtunhapGetbyId($idchungtunhap);

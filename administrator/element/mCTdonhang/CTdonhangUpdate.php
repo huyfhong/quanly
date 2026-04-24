@@ -9,8 +9,8 @@ $getCTdonhang = $CTdonhangObj->CTdonhangGetbyId($idctdonhang);
 <div class="container">
 <form name="updateCTdonhang" id="formreg" method="post" action="./element/mCTdonhang/CTdonhangAct.php?reqact=updateCTdonhang">
     <input type="hidden" name="idctdonhang" value="<?php echo $idctdonhang;?>"/>
-    <input type="hidden" name="iddonhang" value="<?php echo $iddonhang;?>"/>
-    <input type="hidden" name="idhanghoa" value="<?php echo $idhanghoa;?>"/>
+    <input type="hidden" name="iddonhang" value="<?php echo $getCTdonhang->iddonhang;?>"/>
+    <input type="hidden" name="idhanghoa" value="<?php echo $getCTdonhang->idhanghoa;?>"/>
     <table>
     <tr>
     <div class="input-group mb-3">

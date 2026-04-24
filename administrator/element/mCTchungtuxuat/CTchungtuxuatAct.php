@@ -40,7 +40,10 @@ require '../../element/mod/CTchungtuxuatCls.php';
                     header('location:../../index.php?req=CTchungtuxuatView&result=notok');
                 }
                 break;
-                
-
+            default:
+                header('location:../../index.php?req=CTchungtuxuatView');
+                break;
             }
+        } else {
+            header('location:../../index.php?req=CTchungtuxuatView');
         }

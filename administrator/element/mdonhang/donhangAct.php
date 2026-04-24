@@ -44,6 +44,9 @@ if(isset($_GET['reqact'])) {
                 header('location:../../index.php?req=donhangView&result=notok');
             }
             break;
+        default:
+            header('location:../../index.php?req=donhangView');
+            break;
     }
 }else{
     header('location:../../index.php?req=donhangView');

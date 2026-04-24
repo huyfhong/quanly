@@ -41,7 +41,10 @@ require '../../element/mod/CTchungtunhapCls.php';
                     header('location:../../index.php?req=CTchungtunhapView&result=notok');
                 }
                 break;
-                
-
+            default:
+                header('location:../../index.php?req=CTchungtunhapView');
+                break;
             }
+        } else {
+            header('location:../../index.php?req=CTchungtunhapView');
         }

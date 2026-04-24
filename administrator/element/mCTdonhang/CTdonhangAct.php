@@ -25,6 +25,9 @@ if(isset($_GET['reqact'])) {
                 header('location:../../index.php?req=CTdonhangView&result=notok');
             }
             break;
+        default:
+            header('location:../../index.php?req=CTdonhangView');
+            break;
     }
 }else{
     header('location:../../index.php?req=CTdonhangView');

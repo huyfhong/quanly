@@ -39,7 +39,10 @@ require '../../element/mod/GiaCls.php';
                     header('location:../../index.php?req=giaView&result=notok');
                 }
                 break;
-                
-
+            default:
+                header('location:../../index.php?req=giaView');
+                break;
             }
+        } else {
+            header('location:../../index.php?req=giaView');
         }

@@ -1,22 +1,12 @@
 <?php
-$s = '../../element/mod/Database.php';
-if (file_exists($s)) {
-    $f = $s;
+// xu ly duong dan den database.php
+$f = __DIR__ . '/Database.php';
+if (file_exists($f)) {
+    require_once $f;
 } else {
-    $f = './element/mod/Database.php';
-   if (!file_exists($f)) {
-    $f = './administrator/element/mod/Database.php';
-    }
-}
-class Databasethuoctinh_hanghoa{
-    protected $db;
-
-    public function __construct() {
-        $this->db = new PDO('mysql:host=localhost;dbname=testdb;charset=utf8', 'username', 'password');
-    }
+    require_once '../../element/mod/Database.php';
 }
 
-require_once $f;
 class thuoctinh_hanghoa extends Database
 {
     public function Thuoctinh_hanghoaGetAll()

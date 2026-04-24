@@ -17,7 +17,7 @@ $list_hh = $hh->HanghoaGetAll();
     <tr>
     <div class="input-group mb-3">
     <span class="input-group-text">Đơn giá</span>
-    <input type="text" class="form-control" placeholder="Nhập tên thuộc tính" name="dongia" value="<?php echo number_format($getgia->dongia, 0, ',', '.');?>"/>
+    <input type="text" class="form-control" placeholder="Nhập tên thuộc tính" name="dongia" value="<?php echo $getgia->dongia;?>"/>
     </div>
     </tr>
     <tr>

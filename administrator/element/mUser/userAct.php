@@ -174,7 +174,7 @@ if(isset($_GET['reqact'])) {
             }
 
             session_destroy();
-            header('location:../../index.php');
+            header('location:../../../index.php');
             break;
             
         case 'userupdate_frontend':

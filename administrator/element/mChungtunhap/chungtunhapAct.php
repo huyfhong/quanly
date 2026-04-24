@@ -1,5 +1,5 @@
 <?php
-require_once '../../element/mod/chungtunhapCls.php';
+require_once '../../element/mod/ChungtunhapCls.php';
 if(isset($_GET['reqact'])) {
     $requestAction = $_GET['reqact'];
     switch ($requestAction) {
@@ -38,11 +38,14 @@ if(isset($_GET['reqact'])) {
             }else {
                 header('location:../../index.php?req=chungtunhapView&result=notok');
             }
-    
-        }
-    } else{
-        header('location:../../index.php?req=chungtunhapView');
+            break;
+        default:
+            header('location:../../index.php?req=chungtunhapView');
+            break;
     }
+} else {
+    header('location:../../index.php?req=chungtunhapView');
+}
     
 
        

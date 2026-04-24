@@ -40,7 +40,10 @@ require '../../element/mod/thuoctinh_hanghoaCls.php';
                     header('location:../../index.php?req=thuoctinh_hanghoaView&result=notok');
                 }
                 break;
-                
-
+            default:
+                header('location:../../index.php?req=thuoctinh_hanghoaView');
+                break;
             }
+        } else {
+            header('location:../../index.php?req=thuoctinh_hanghoaView');
         }

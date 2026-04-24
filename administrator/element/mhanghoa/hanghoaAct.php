@@ -58,6 +58,11 @@ require '../../element/mod/hanghoaCls.php';
                     header('location:../../index.php?req=hanghoaView&result=notok');
                 }
                 break;
+            default:
+                header('location:../../index.php?req=hanghoaView');
+                break;
             }
+        } else {
+            header('location:../../index.php?req=hanghoaView');
         }
 ?>

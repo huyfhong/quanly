@@ -1,5 +1,5 @@
 <?php
-require_once '../../element/mod/chungtuxuatCls.php';
+require_once '../../element/mod/ChungtuxuatCls.php';
 if(isset($_GET['reqact'])) {
     $requestAction = $_GET['reqact'];
     switch ($requestAction) {
@@ -38,11 +38,14 @@ if(isset($_GET['reqact'])) {
             }else {
                 header('location:../../index.php?req=chungtuxuatView&result=notok');
             }
-    
-        }
-    } else{
-        header('location:../../index.php?req=chungtuxuatView');
+            break;
+        default:
+            header('location:../../index.php?req=chungtuxuatView');
+            break;
     }
+} else {
+    header('location:../../index.php?req=chungtuxuatView');
+}
     
 
        

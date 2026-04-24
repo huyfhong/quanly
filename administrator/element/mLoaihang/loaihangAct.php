@@ -24,9 +24,6 @@ if(isset($_GET['reqact'])) {
                 header('location:../../index.php?req=loaihangView&result=notok');
             }
             break;
-            default:
-            header('location:../../index.php?req=loaihangView');
-            break;
              
         case 'deleteloaihang': 
             $idloaihang=$_GET['idloaihang'];
@@ -55,13 +52,16 @@ if(isset($_GET['reqact'])) {
            $lh = new loaihang();
            $kq = $lh->LoaihangUpdate($tenloaihang, $ghichu, $hinhanh, $idloaihang);
            if ($kq) {
-               header('location: ../../index.php?req=loaihangView&result=ok');
+               header('location:../../index.php?req=loaihangView&result=ok');
            } else {
-               header('location: ../../index.php?req=loaihangView&result=notok');
+               header('location:../../index.php?req=loaihangView&result=notok');
                }
+           break;
+        default:
+           header('location:../../index.php?req=loaihangView');
            break;
         }
     }else{
-        header('location:../../index.php?req=loaihangView&result=ok');
+        header('location:../../index.php?req=loaihangView');
     }    
 ?>

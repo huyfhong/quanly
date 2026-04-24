@@ -1,4 +1,4 @@
- <?php
+<?php
 // xu ly duong dan den database.php
 $f = __DIR__ . '/Database.php';
 if (file_exists($f)) {
@@ -6,9 +6,6 @@ if (file_exists($f)) {
 } else {
     require_once '../../element/mod/Database.php';
 }
-    $f = './administrator/element/mod/Database.php';
-    }
-require_once $f;
 
 class thuoctinh extends Database {
     public function thuoctinhGetAll(){

@@ -110,10 +110,10 @@ $l = count($list_CTnhap);
                         <td><?php echo $v->ghichu;?></td>
                         <td class="text-center">
                             <div class="btn-action-group">
-                                <a href="javascript:void(0);" onclick="confirmDelete('./element/mCTchungtunhap/CTchungtunhapAct.php?reqact=deletectchungtunhap&idctchungtunhap=<?php echo $v->idctchungtunhap;?>')" class="btn btn-outline-danger btn-action" title="Xóa">
+                                <a href="javascript:void(0);" onclick="confirmDelete('./element/mCTchungtunhap/CTchungtunhapAct.php?reqact=deletectchungtunhap&idCTchungtunhap=<?php echo $v->idCTchungtunhap;?>')" class="btn btn-outline-danger btn-action" title="Xóa">
                                     <i class="bi bi-trash"></i>
                                 </a>
-                                <a href="./index.php?req=CTchungtunhapUpdate&idctchungtunhap=<?php echo $v->idctchungtunhap;?>" class="btn btn-outline-primary btn-action" title="Cập nhật">
+                                <a href="./index.php?req=CTchungtunhapUpdate&idCTchungtunhap=<?php echo $v->idCTchungtunhap;?>" class="btn btn-outline-primary btn-action" title="Cập nhật">
                                     <i class="bi bi-pencil-square"></i>
                                 </a>
                             </div>

@@ -55,7 +55,7 @@ $list_tt = $tt->thuoctinhGetAll();
     ?>    
     <div class="form-check form-check-inline">
     <label for="form-check-input" class="form-label">thuộc tính</label>
-    <input class="form-check-input" type="radio" name="idthuoctinh"<?php if($l->idthuoctinh==$getthuoctinh_hanghoa->idthuoctinh) echo "checked";?> value="<?php echo $l->idthuoctinh;?>"/>
+    <input class="form-check-input" type="radio" name="idthuoctinh" <?php if($l->idthuoctinh==$getthuoctinh_hanghoa->idthuoctinh) echo "checked";?> value="<?php echo $l->idthuoctinh;?>"/>
     <?php echo ($l->tenthuoctinh);?><br>
     </div>
     <?php

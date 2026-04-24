@@ -1,5 +1,11 @@
 <?php
-require_once __DIR__ . '/Database.php';
+// xu ly duong dan den database.php
+$f = __DIR__ . '/Database.php';
+if (file_exists($f)) {
+    require_once $f;
+} else {
+    require_once '../../element/mod/Database.php';
+}
 
 class chungtunhap extends Database {
     public function ChungtunhapGetAll(){
